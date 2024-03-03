@@ -1,0 +1,103 @@
+<mxfile host="65bd71144e">
+    <diagram id="1yWGXXJgIqmCm_UhbRNS" name="페이지-1">
+        <mxGraphModel dx="1266" dy="675" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="api&lt;br&gt;[k8s]" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="630" y="440" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="fga&lt;br&gt;[k8s]" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="630" y="620" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="MYSQL" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="350" y="620" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="PR" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="340" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="2" target="3">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="640" y="470" as="sourcePoint"/>
+                        <mxPoint x="470" y="650" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="1. model 접근 권한 관련 요청&lt;br&gt;* fga상에서 권한 등록" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="525" width="170" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="권한 검증 시나리오&lt;br&gt;- fga 컴포넌트는 무조건 api를 통한다&lt;br&gt;- 권한 생성/ 권한 조회 모두 api를 통해 제공" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="240" width="230" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="5" target="2">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="695" y="490" as="sourcePoint"/>
+                        <mxPoint x="695" y="630" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="fga의 datastore" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="650" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="https://openfga.dev/api/service#/Relationship%20Queries/Check&lt;br&gt;POST /stores&amp;nbsp; # store 생성&lt;br&gt;GET /stores/{store-id}/authorization-models # store의 전체 인증 모델 반환&lt;br&gt;POST /stores/{store-id}/authorization-models # 인증 모델 생성, 특정 버전을 포함한 authorization-model-id 반환&lt;br&gt;&lt;br&gt;POST /stores/{store-id}/read # store에서 매치된 tuple 반환, 특정 관계, 개체에 연결된 정보 등 조회 가능&lt;br&gt;&lt;br&gt;POST /stores/{store-id}/write # add/delete tuple. json body내 writes | deletes 키 사용&lt;br&gt;&lt;br&gt;POST /stores/{store-id}/check # 유저가 해당 모델에 접근 가능한가" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="970" y="595" width="590" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="authorization-model 과 tuple로 이루어져 있음" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="940" y="790" width="250" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="모델 생성 요청" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="570" y="310" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="데이터 조회 app" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="800" y="340" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="특정 모델에 대한 데이터 조회를 위해서는,&lt;br&gt;hdfs/hive 권한도 필요할 것&lt;br&gt;&lt;br&gt;현재 wdl_...과 같은 경로를 가지고 생성될 예정" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="350" y="770" width="240" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="21" target="2">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="870" y="370" as="sourcePoint"/>
+                        <mxPoint x="870" y="510" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="flow.er" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="1010" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="인증레벨" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="195" y="965" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="ranger" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="1110" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="24" target="27">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="600" y="1040" as="sourcePoint"/>
+                        <mxPoint x="360" y="1115" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="29" value="application단 인증&lt;br&gt;모델에 대한 접근 권한. 생성 권한 등을 관리함" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="415" y="1010" width="240" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="하둡과 연계된 권한 인증 체계&lt;br&gt;hdfs, hive 등의 실제 cluster에서 구동될 권한과 의존성이 있음" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="415" y="1110" width="320" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="cluster-admin&lt;br&gt;[wrap. ranger]" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="830" y="510" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="2" target="34">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1110" y="385" as="sourcePoint"/>
+                        <mxPoint x="940" y="445" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="auth 요청&lt;br&gt;query시 proxy가 필요할 수 있음&lt;br&gt;해당 사용자가 이 모델의 데이터를 활용할 수 있는지" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="800" y="260" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="2. hdfs/hive 권한 요청&lt;br&gt;* 특정 path, table에 대한 권한 부여" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="805" y="440" width="190" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
