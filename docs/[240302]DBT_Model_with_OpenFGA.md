@@ -154,5 +154,3 @@ body = ClientWriteRequest(
 
 response = await fga_client.write(body, options)
 ```
-
-## group의 
