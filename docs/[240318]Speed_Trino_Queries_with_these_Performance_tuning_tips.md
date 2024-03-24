@@ -84,7 +84,7 @@ EXPLAIN ANALYZE select * from customers limit 5;
   - File Format, Compression, Partition, Bucketing, Sorting, ...
 
 #### Columnar data file formats and compression
-- footer of the files로부터 metadat에 먼저 접근
+- footer of the files로부터 metadata에 먼저 접근
   - columnar data를 읽음
   - 파일의 구조와 data section의 위치를 지정
 - trino는 columnar data를 효율적으로 처리하기 위해 많음 thread 사용
